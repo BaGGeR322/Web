@@ -1,0 +1,217 @@
+  
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Отзывы о заданиях</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid d-flex align-items-center">
+                <i class="fas fa-cogs navbar-brand ml-3"></i>
+                <ol class="breadcrumb mt-3 ml-2 bg-transparent">
+                    <li class="breadcrumb-item"><a href="Главная.html" id="other-page">Главная</a></li>
+                    <li class="breadcrumb-item active" aria-current="page" id="current-page">Отзывы о заданиях</li>
+                </ol>
+                <div class="ml-auto profile-icon mr-5">
+                    <i class="fas fa-tasks navbar-brand">
+                        <div class="dropdown-menu" id="first-menu">
+                            <a class="dropdown-item" data-container="body" data-trigger="hover"
+                                style="background: rgba(255, 0, 0, 0.2);" data-toggle="popover" data-placement="left"
+                                data-content="На данный момент авторизироваться невозможно, приносим извинения за доставленные неудобства.">
+                                Отзывы о заданиях
+                            </a>
+                            <a class="dropdown-item" id="second-menu-btn" tabindex="0">
+                                Задания
+                            </a>
+                            <div class="dropdown-menu" id="second-menu">
+                                <a class="dropdown-item" href="Задание 2.html">Задание 2</a>
+                                <a class="dropdown-item" href="Задание 3.html">Задание 3</a>
+                            </div>
+                        </div>
+                    </i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid mt-3">
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">Оставить отзыв</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Номер задания</span>
+                            <input type="text" class="form-control" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Оценка</span>
+                            </div>
+                            <textarea class="form-control" aria-label="With textarea"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Отправить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+                    aria-controls="nav-home" aria-selected="true">Отзывы от МКН</a>
+                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                    aria-controls="nav-profile" aria-selected="false">Отзывы от ПМИ</a>
+            </div>
+        </nav>
+        <div class="tab-content d-flex justify-content-center" id="nav-tabContent">
+            <div class="tab-pane fade show active" style="width: 100%" id="nav-home" role="tabpanel"
+                aria-labelledby="nav-home-tab">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th scope="col"><i class="far fa-star"></i></th>
+                            <th scope="col">Топ-1<span class="badge top1 ml-1">WOW!</span></th>
+                            <th scope="col">Топ-2<span class="badge top2 ml-1">GREAT!</span></th>
+                            <th scope="col">Топ-3<span class="badge top3 ml-1">NICE!</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">ФИО</th>
+                            <td class="top1" align="center">Садыков Р.Н.</td>
+                            <td class="top2" align="center">Метелев Р.Г.</td>
+                            <td class="top3" align="center">Казыкина М.Г.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Номер задания</th>
+                            <td class="top1" align="center">3</td>
+                            <td class="top2" align="center">2</td>
+                            <td class="top3" align="center">1</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Оценка (x/10)</th>
+                            <td class="top1" align="center">8</td>
+                            <td class="top2" align="center">4</td>
+                            <td class="top3" align="center">6</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+                <div class="d-flex justify-content-center pt-2" style="position: sticky; top: 0;">
+                    <button type="button" class="btn btn-primary w-100 mb-3" data-toggle="modal"
+                        data-target="#exampleModalCenter">Оставить отзыв</button>
+                </div>
+                <div class="text-justify">
+                    <div class="media">
+                        <img src="https://sun9-72.userapi.com/c857532/v857532321/1e9503/wAZAWq4Z_LQ.jpg"
+                            class="mr-3 comment-image">
+                        <div class="media-body">
+                            <h5 class="mt-0">Nova GC</h5>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia vero assumenda et nostrum distinctio esse blanditiis accusantium nemo sit, autem fuga illum nulla praesentium nesciunt quam, dolorum repudiandae asperiores dolore?
+                            Eos quibusdam quidem fugiat ipsum, sed cumque mollitia quae officiis optio veritatis enim explicabo nulla officia, iusto amet nemo temporibus reiciendis rem possimus perferendis, ex unde? Aut facere fugit nostrum!
+                            Sint asperiores inventore numquam nesciunt maiores dolores expedita eos soluta laudantium officia reprehenderit fuga libero, natus sunt rerum, distinctio ad, accusamus est cum. Dicta repellendus quis vero repellat. Quidem, atque!
+                            Assumenda possimus suscipit non veniam molestias nesciunt delectus mollitia. Hic ipsa nisi harum facilis sit mollitia assumenda, delectus saepe cupiditate soluta repellendus obcaecati eum sed! Nisi modi earum doloribus quos.
+                            Voluptate necessitatibus totam tempora voluptatem numquam cupiditate excepturi at vel. Expedita quasi ea, facere quibusdam ullam commodi labore magni odio minus dolore voluptatem accusamus reiciendis quia atque quod rerum eius.
+                            Iure, consectetur alias doloremque ipsum recusandae adipisci eius consequuntur necessitatibus temporibus ex harum nihil porro nemo sunt laborum dolor repellendus cumque nostrum aut est soluta minus! Eaque error beatae laboriosam!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th scope="col"><i class="far fa-star"></i></th>
+                            <th scope="col">Топ-1<span class="badge top1 ml-1">WOW!</span></th>
+                            <th scope="col">Топ-2<span class="badge top2 ml-1">GREAT!</span></th>
+                            <th scope="col">Топ-3<span class="badge top3 ml-1">NICE!</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">ФИО</th>
+                            <td class="top1" align="center">Хадыкин М.О.</td>
+                            <td class="top2" align="center">Журавлев С.Р.</td>
+                            <td class="top3" align="center">Мини Н.Ш.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Номер задания</th>
+                            <td class="top1" align="center">2</td>
+                            <td class="top2" align="center">1</td>
+                            <td class="top3" align="center">3</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Оценка (x/10)</th>
+                            <td class="top1" align="center">5</td>
+                            <td class="top2" align="center">7</td>
+                            <td class="top3" align="center">10</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+                <div class="d-flex justify-content-center pt-2" style="position: sticky; top: 0;">
+                    <button type="button" class="btn btn-primary w-100 mb-3" data-toggle="modal"
+                        data-target="#exampleModalCenter">Оставить отзыв</button>
+                </div>
+                <div class="text-justify">
+                    <div class="text-justify">
+                        <ul class="list-unstyled">
+                            <li class="media">
+                                <img src="https://sun1-87.userapi.com/w7xeZCX3stTYV4a6XHjOLNi-uhcHCHHVEiR6yw/BRaVGbiHPWo.jpg"
+                                    class="mr-3 comment-image" alt="...">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Степан Скурский</h5>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo ipsa hic esse eligendi beatae ad voluptate doloribus eos sed eius sequi, consectetur repudiandae vel! Quibusdam dolorem atque mollitia quam consectetur?
+                                    Quos repudiandae pariatur dolore in praesentium aliquid aspernatur nam nobis excepturi ea reiciendis cumque, numquam temporibus neque laborum tenetur, impedit quibusdam debitis quia officiis sit harum doloremque. Ad, autem ex?
+                                    Nulla consequuntur inventore distinctio incidunt iure delectus ad expedita reiciendis quia. Neque accusantium soluta rerum esse dolores blanditiis dignissimos. Est rem non accusantium quasi impedit tenetur, blanditiis maiores eligendi consequatur?
+                                    Molestias maiores minus incidunt laudantium! Ex numquam maiores, quas, laboriosam aspernatur natus vel earum praesentium consectetur nulla non nesciunt iste voluptate? Dicta, cumque. Libero quos esse enim quo reprehenderit tempora!
+                                </div>
+                            </li>
+                            <li class="media my-4">
+                                <img src="https://sun9-22.userapi.com/c855536/v855536602/769a6/LECyyPSQLJs.jpg"
+                                    class="mr-3 comment-image" alt="...">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Сергей Семенец</h5>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum deleniti dignissimos autem harum vel, mollitia exercitationem in architecto ab illum voluptas inventore? Adipisci deserunt magni ea delectus fugiat rerum est.Ab quis distinctio voluptates accusamus impedit dolores qui nemo dolore neque quibusdam cum molestiae laudantium, soluta placeat, blanditiis magni, libero ipsa assumenda! Illum nam cum facilis aliquid quod. Neque, laboriosam.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

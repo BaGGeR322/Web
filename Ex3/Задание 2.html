@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Задание 2</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid d-flex align-items-center">
+          <i class="fas fa-cogs navbar-brand ml-3"></i>
+          <ol class="breadcrumb mt-3 ml-2 bg-transparent">
+            <li class="breadcrumb-item">
+              <a href="Главная.html" id="other-page">Главная</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="Отзывы.html" id="other-page">Отзывы о заданиях</a>
+            </li>
+            <li
+              class="breadcrumb-item active"
+              aria-current="page"
+              id="current-page"
+            >
+              Задание 2
+            </li>
+          </ol>
+          <div class="ml-auto profile-icon mr-5">
+            <i class="fas fa-tasks navbar-brand">
+              <div class="dropdown-menu" id="first-menu">
+                <a
+                  class="dropdown-item"
+                  data-container="body"
+                  data-trigger="hover"
+                  style="background: rgba(255, 0, 0, 0.2);"
+                  data-toggle="popover"
+                  data-placement="left"
+                  href="Отзывы.html"
+                >
+                  Отзывы о заданиях
+                </a>
+                <a class="dropdown-item" id="second-menu-btn" tabindex="0">
+                  Задания
+                </a>
+                <div class="dropdown-menu" id="second-menu">
+                  <a class="dropdown-item active" href="#">Задание 2</a>
+                  <a class="dropdown-item" href="Задание 3.html">Задание 3</a>
+                </div>
+              </div>
+            </i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div
+      class="container-fluid canvas mt-5 d-flex justify-content-center align-items-center"
+    >
+      <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+      <svg
+        version="1.1"
+        baseProfile="full"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlns:ev="http://www.w3.org/2001/xml-events"
+        height="400px"
+        width="400px"
+      >
+        <path
+          d="M 10 315
+      L 110 215
+      A 36 60 0 0 1 150.71 170.29
+      L 172.55 152.45
+      A 30 50 -45 0 1 215.1 109.9
+      L 315 10"
+          stroke="black"
+          fill="green"
+          stroke-width="2"
+          fill-opacity="0.5"
+        />
+        <circle cx="150.71" cy="170.29" r="2" fill="red" />
+        <circle cx="110" cy="215" r="2" fill="red" />
+        <ellipse
+          cx="144.931"
+          cy="229.512"
+          rx="36"
+          ry="60"
+          fill="transparent"
+          stroke="blue"
+        />
+        <ellipse
+          cx="115.779"
+          cy="155.778"
+          rx="36"
+          ry="60"
+          fill="transparent"
+          stroke="blue"
+        />
+      </svg>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
