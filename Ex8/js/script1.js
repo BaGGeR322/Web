@@ -1,50 +1,55 @@
-var xarr1 = [];
-var yarr1 = [];
-var xarr2 = [];
-var yarr2 = [];
-var kc;
-let a=false;
-let x;
-let y;
-var canvas = document.getElementById('canvas');
+let shapes = [];
+let newShape = undefined;
 
-function setup(){
-    createCanvas(500,500);
-    background(0);
-}
-function mouseDragged(){
-    if (!a){
-        x=mouseX;
-        y=mouseY;
-        xarr1.push(x);
-        yarr1.push(y);
-        a=true;
-    }
-    var ctx = canvas.getContext('2d');
-    ctx.strokeStyle = "white";
-    ctx.clearRect(0, 0, 500, 500);
-    background(0);
-    if ((xarr2.length)>0) for (let i = 0; i < xarr2.length; i++)
-        ctx.strokeRect(xarr1[i], yarr1[i], xarr2[i]-xarr1[i], yarr2[i]-yarr1[i]);
-    ctx.strokeRect(x, y, mouseX-x, mouseY-y);
-}
-function mouseReleased(){
-    xarr2.push(mouseX);
-    yarr2.push(mouseY);
-    a=false;
-}
-function keyPressed() {
-    if (event.code == 'KeyZ' && (event.ctrlKey || event.metaKey)) {
-        xarr1.pop();
-        yarr1.pop();
-        xarr2.pop();
-        yarr2.pop();
-        var ctx = canvas.getContext('2d');
-        ctx.strokeStyle = "white";
-        ctx.clearRect(0, 0, 500, 500);
-        background(0);
-        for (let i = 0; i < xarr2.length; i++)
-            ctx.strokeRect(xarr1[i], yarr1[i], xarr2[i]-xarr1[i], yarr2[i]-yarr1[i]);
-    }
-}
+const checkNewShape = (shape) => {
+  if (shape && shape.x1 && shape.x2 && shape.y1 && shape.y2) {
+    return true;
+  }
+  return false;
+};
 
+const sketch = (p) => {
+  p.setup = () => {
+    p.createCanvas(500, 500);
+    p.background(0);
+  };
+
+  p.draw = () => {
+    p.background(0);
+    p.stroke(255);
+    p.strokeWeight(2);
+    p.fill(0, 0, 0, 0);
+    shapes.forEach((shape) => {
+      p.rect(shape.x1, shape.y1, shape.x2, shape.y2);
+    });
+
+    if (checkNewShape(newShape)) {
+      p.rect(newShape.x1, newShape.y1, newShape.x2, newShape.y2);
+    }
+  };
+
+  p.mouseDragged = () => {
+    if (!newShape) {
+      newShape = {
+        x1: p.mouseX,
+        y1: p.mouseY,
+      };
+    } else {
+      newShape.x2 = p.mouseX - newShape.x1;
+      newShape.y2 = p.mouseY - newShape.y1;
+    }
+  };
+
+  p.mouseReleased = () => {
+    shapes.push(newShape);
+    newShape = undefined;
+  };
+
+  p.keyPressed = () => {
+    if (event.code == "KeyZ" && (event.ctrlKey || event.metaKey)) {
+      shapes.pop();
+    }
+  };
+};
+
+const myp5 = new p5(sketch);
