@@ -1,0 +1,191 @@
+*{
+    box-sizing: border-box;
+}
+html, body {
+    font-family: verdana, arial, sans-serif;
+}
+
+body {
+    color: #fff;
+    font-size: 1.1em;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+article {
+    background: linear-gradient(90deg, #ff8000 0%, #5fbe00 50%, #ff8000 100%);
+    flex: 2 2 10em;
+    padding: 0.2em;
+}
+
+.talign1 > p{
+    line-height:860px;/* устанавливаем высоту строки в соответствии с высотой блока */
+    margin:0;/* убираем внешние отступы, если они есть */
+    text-align:center;/* выравниваем текст по центре по горизонтали */
+    padding: 0;/* убираем внутренние отступы, если они есть */
+    font-size: 50px;
+}
+
+.social, aside {
+    flex: 1;
+    background: linear-gradient(90deg, rgba(255,128,0,1) 0%, rgba(255,109,0,1) 50%, rgba(255,128,0,1) 100%);
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    order: -1;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header, footer {
+    flex: 0 0 3.7em;
+    background-color:#008000;
+}
+
+header {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+@media screen and (min-width: 600px) {
+
+    body{
+        min-height: 100vh;
+    }
+    main {
+        flex-direction: row;
+        min-height: 100%;
+        flex: 1 1 auto;
+    }
+}
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    p:first-line,
+    div:first-line,
+    blockquote:first-line,
+    li:first-line {
+      background: transparent !important;
+      color: #000 !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+  
+    body {
+      min-height: 100vh;
+    }
+  
+    header,
+    aside,
+    .social,
+    footer,
+    img {
+      display: none;
+    }
+}
+
+.stih {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+stihot {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+marina {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+img {
+    margin-left: 25px;
+    margin-right: 50px;
+}
+.me {
+    font-size: 24px;
+}
+
+.main-menu a {
+    color: #ffffff;
+    text-decoration: none; 
+}
+  .main-menu ul {
+    background: #bc9cff;
+    list-style: none;
+    margin: 0; 
+    padding-left: 0; 
+}
+    .main-menu ul li {
+      color: #ffffff;
+      background: #bc9cff;
+      display: block;
+      float: left;
+      padding: 1rem;
+      position: relative;
+      text-decoration: none;
+      transition-duration: 0.7s; 
+    }
+      .main-menu ul li:hover {
+        background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+        cursor: pointer; 
+    }
+      .main-menu ul li ul {
+        background: rgba(31, 32, 65, 0.25);
+        font-size: 0.7rem;
+        visibility: hidden;
+        opacity: 0;
+        min-width: 1rem;
+        position: absolute;
+        transition: all 0.5s ease;
+        margin-top: 1rem;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+     }
+        .main-menu ul li ul li {
+          clear: both;
+          width: 100%; 
+        }
+    .main-menu ul li:hover > ul,
+    .main-menu ul li ul:hover {
+      visibility: visible;
+      opacity: 1;
+      display: block; 
+    }
