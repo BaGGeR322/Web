@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css\style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <title>L-System Bushes</title>
+</head>
+<body>
+    <script src="js/script1.js"></script>
+
+    <nav class="four">
+        <h2>Аксиомы</h2>
+        <ul class="topmenu">
+            <li><a href="#">F+XF+F+XF<i class="fa fa-angle-down"></i></a>
+                <ul class="submenu">
+                    <li><button id="FXFFXF">
+                        X -> XF-F+F-XF+F+XF-F+F-X
+                    </button></li>
+                </ul>
+            </li>
+            <li><a href="#">Y<i class="fa fa-angle-down"></i></a>
+                <ul class="submenu">
+                    <li><button id="Y">
+                        X -> X[-FFF][+FFF]FX <br/>
+                        Y -> YFX[+Y][-Y] <br/>
+                    </button></li>
+                </ul>
+            </li>
+            <li><a href="#">F<i class="fa fa-angle-down"></i></a>
+                <ul class="submenu">
+                    <li><button id="F1">F -> FF+[+F-F-F]-[-F+F+F]</button></li>
+                    <li><button id="F2">F -> F[+FF][-FF]F[-F][+F]F</button></li>
+                </ul>
+            </li>
+            <li><a href="#">VZFFF<i class="fa fa-angle-down"></i></a>
+                <ul class="submenu">
+                    <li><button id="VZFFF">
+                        V -> [+++W][---W]YV <br/>
+                        W -> +X[-W]Z <br/>
+                        X -> -W[+X]Z <br/>
+                        Y -> YZ <br/>
+                        Z -> [-FFF][+FFF]F <br/>
+                    </button></li>
+                </ul>
+            </li>
+            <li><a href="#">YX<i class="fa fa-angle-down"></i></a>
+                <ul class="submenu">
+                    <li><button id="YX">
+                        X -> YF+XF+Y <br/>
+                        Y -> XF-YF-X <br/>
+                    </button></li>
+                </ul>
+            </li>
+            <li><a href="#">X<i class="fa fa-angle-down"></i></a>
+                <ul class="submenu">
+                    <li><button id="X">
+                        F -> FF <br/>
+                        X -> F[+X]F[-X]+X <br/>
+                    </button></li>
+                </ul>
+            </li>
+        </ul>
+      </nav>
+      <div class = "back1">
+        <h2>Цвет бэкграунда (RGB) </h2>
+        <input type="range" min="0" max="255" id="line1" 
+        oninput="rback1()" value="71">
+        <div id="rgbback1">71</div>
+        <input type="range" min="0" max="255" id="line2" 
+        oninput="rback2()" value="71">
+        <div id="rgbback2">71</div>
+        <input type="range" min="0" max="255" id="line3" 
+        oninput="rback3()" value="71">
+        <div id="rgbback3">71</div>
+      </div>
+      <div class = "back2">
+        <h2>Цвет линии (RGB) </h2>
+        <input type="range" min="0" max="255" id="line4" 
+        oninput="rline1()" value="255">
+        <div id="rgbline1">255</div>
+        <input type="range" min="0" max="255" id="line5" 
+        oninput="rline2()" value="255">
+        <div id="rgbline2">255</div>
+        <input type="range" min="0" max="255" id="line6" 
+        oninput="rline3()" value="255">
+        <div id="rgbline3">255</div>
+      </div>
+
+
+      <p>Аксиома: <span id="axiom"></span></p>
+      <p>Правила: <br/><div id="TextRules"></div></p>
+      <button id="generate">generate (1 шаг)</button>
+      <h2>Здесь онли кастомки, запомните.</h2>
+      <h2>ЕСЛИ НИЧЕГО НЕ БУДЕТ ВИДНО: <br>Нажмите на кнопку "В середину" и проверьте свой "Угол"</h2>
+      <p>Аксиома: <input id="TextAxioma" type="text" placeholder="Аксиома" value="F"></p> 
+      <p>Правила:</p> 
+      
+      <div id="input0"></div>
+      <div class="add" onclick="addInput()">+</div>
+      <button id="ApplyF">Применить</button>
+      
+      <p>Длина линии: <span id="Len"></span><input id="TextLenIn" type="number" placeholder="Длина"><button id="PushLen" >Нажать!</button></p> 
+      <p>Угол: <span id="TextAngle"></span><input id="TextAngleIn" type="number" placeholder="Угол"><button id="PushAngle" >Нажать!</button></p> 
+      <p>Шаг: <span id="Steps">1 </span>шаг<input id="StepsIn" type="number" placeholder="" value="1"><button id="PushSteps" >generate</button></p> 
+      <p>Деление: <span id="Div">2 </span><input id="TextDivIn" type="number" placeholder="" value="1"><button id="PushDiv" >Нажать!</button></p> 
+      <p>
+          <button id="but_left">Влево</button>
+          <button id="but_right">Вправо</button>
+          <button id="but_center">В середину</button>
+          <button id="but_top">Наверх</button>
+          <button id="but_down">Вниз</button>
+      </p>
+      <p>
+        <button id="but_rotleft">Повернуть влево</button>
+        <button id="but_rotright">Повернуть вправо</button>
+      </p>
+</body>
+</html>
